@@ -61,11 +61,9 @@ The SQL query used to retieve data from the **Unique Titles** table is shown bel
 ![image](https://user-images.githubusercontent.com/31812730/194464970-14a3c62b-e2f1-450f-acec-c33885b0578b.png)
 
 ### Step 4: Create Mentorship Eligibility Table
-In this step, data extracted from 3 different tables to create a Mentorship Eligibility table that holds the employees who are eligible to participate in a mentorship program.
-###############??????????????#######???????????? - add stuff here
+In this step, data was extracted from 3 different tables to create a Mentorship Eligibility table that holds the employees who are eligible to participate in a mentorship program. Employees, Department Employee and Titles tables were joined to extract **Employee Number, First Name, Last Name, Birth Date, and and From and To Date** of the employee holding the Title details. **DISTINCT ON** statement was used to retrieve the details of first occurrence of the employee number for each set.
 
-
-The SQL query used to retieve data from the **Unique Titles** table is shown below:
+The SQL query used to retieve data from the **Mentorship Eligibility** table is shown below:
 
     SELECT DISTINCT ON(E.emp_no) E.emp_no, E.first_name, E.last_name, E.birth_date, 
                                  DE.from_date, DE.to_date, T.title
