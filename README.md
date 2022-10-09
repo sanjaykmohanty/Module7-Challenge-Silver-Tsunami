@@ -82,3 +82,11 @@ The SQL query used to retieve data from the **Mentorship Eligibility** table is 
 ![image](https://user-images.githubusercontent.com/31812730/194465157-605ad31e-3a35-4898-95ed-ee334ec054a8.png)
 
 ## Summary
+How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+The organization has set couple of criterias to determine which employees will be retiring. Based on those criterias, an employee will begin to retire if following conditions are satisfied:
+1. Anyone born between 1952 and 1955 
+2. They were also hired between 1985 and 1988.
+3. They are currently employed with the organization
+
+
+ 
