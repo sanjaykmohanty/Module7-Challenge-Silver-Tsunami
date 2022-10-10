@@ -1,7 +1,7 @@
 # Module7 Challenge - Silver Tsunami
 
 ## Overview
-A large number of employees will be retiring from Pewlett Hackard in next few years. The managers need to prepare for the **siver tsunami**. The purpose of this technical analysis is to determine the number of retiring employees per title, and identify employees who are eligible to participate in a mentorship program offered by Pewlett Hackard.
+Many employees will be retiring from Pewlett Hackard in next few years. The managers need to prepare for the **silver tsunami**. The purpose of this technical analysis is to determine the number of retiring employees per title and identify employees who are eligible to participate in a mentorship program offered by Pewlett Hackard.
 
 The technical analysis report primarily answers the following questions:
 1. The Number of Retiring Employees by Title
@@ -12,12 +12,12 @@ In addition, the report covers the following:
 - The number of qualified, retirement-ready employees in each department to mentor the next generation of Pewlett Hackard employees
 
 ## Results
-The technical analysis involved four major steps. The resullts from each step is shown below.
+The technical analysis involved four major steps. The result from each step is shown below.
 
-### Step 1: Create Retirement_Title Table
+### Step 1: Create Retirement Title Table
 In this step, employee information was pulled from 2 different tables based on their birth dates. The details such as **Employee Number, First Name, Last Name, Title, and From and To Date** of the employee holding the Title were pulled after joining the **Employee** and **Title** tables. The result was filtered on **Birth Date** to retrieve only the employees who were born between 1952 and 1955.
 
-The query used to retieve data from the Employees and Title tables is shown below:
+The query used to retrieve data from the Employees and Title tables is shown below:
     
     SELECT E.emp_no, E.first_name, E.last_name, T.title, T.from_date, T.to_date   
     INTO retirement_titles  
@@ -34,7 +34,7 @@ The query used to retieve data from the Employees and Title tables is shown belo
 ### Step 2: Create Unique Titles Table
 The data extracted in the previous step has a lot of duplicate entries for some employees because they have switched titles over the years. In this step, using the **DISTINCT ON** statement, all the duplicates extracted from the **Retirement Titles** table were removed and only the most recent title of each employee is stored in the **Unique Title** table. The result was filtered to retrieve only the employees who are currently employed.   
 
-The SQL query used to retieve data from the **Retirement Titles** table is shown below:
+The SQL query used to retrieve data from the **Retirement Titles** table is shown below:
 
     SELECT DISTINCT ON (emp_no) emp_no, first_name, last_name, title
     INTO unique_titles
@@ -47,9 +47,9 @@ The SQL query used to retieve data from the **Retirement Titles** table is shown
 ![image](https://user-images.githubusercontent.com/31812730/194647915-d81ec7a8-f946-4a86-ae10-3eda5c4d6866.png)
 
 ### Step 3: Create Retiring Titles Table
-In this step, **Unique Titles** table was queried to count the number of employees by their most recent job title who are about to retire. The employee count was retrieved by groupng the table by title and sorting the count in descending order.
+In this step, **Unique Titles** table was queried to count the number of employees by their most recent job title who are about to retire. The employee count was retrieved by grouping the table by title and sorting the count in descending order.
 
-The SQL query used to retieve data from the **Unique Titles** table is shown below:
+The SQL query used to retrieve data from the **Unique Titles** table is shown below:
 
     SELECT COUNT(title), title
     INTO retiring_titles
@@ -61,9 +61,9 @@ The SQL query used to retieve data from the **Unique Titles** table is shown bel
 ![image](https://user-images.githubusercontent.com/31812730/194464970-14a3c62b-e2f1-450f-acec-c33885b0578b.png)
 
 ### Step 4: Create Mentorship Eligibility Table
-In this step, data was extracted from 3 different tables to create a Mentorship Eligibility table that holds the employees who are eligible to participate in a mentorship program. Employees, Department Employee and Titles tables were joined to extract **Employee Number, First Name, Last Name, Birth Date, and and From and To Date** of the employee holding the Title details. **DISTINCT ON** statement was used to retrieve the details of first occurrence of the employee number for each set.
+In this step, data was extracted from 3 different tables to create a Mentorship Eligibility table that holds the employees who are eligible to participate in a mentorship program. Employees, Department Employee and Titles tables were joined to extract **Employee Number, First Name, Last Name, Birth Date, and From and To Date** of the employee holding the Title details. **DISTINCT ON** statement was used to retrieve the details of first occurrence of the employee number for each set.
 
-The SQL query used to retieve data from the **Mentorship Eligibility** table is shown below:
+The SQL query used to retrieve data from the **Mentorship Eligibility** table is shown below:
 
     SELECT DISTINCT ON(E.emp_no) E.emp_no, E.first_name, E.last_name, E.birth_date, 
                                  DE.from_date, DE.to_date, T.title
@@ -77,22 +77,22 @@ The SQL query used to retieve data from the **Mentorship Eligibility** table is 
     AND E.birth_date BETWEEN '1965-01-01' AND '1965-12-31'
     ORDER By E.emp_no;
 
-**Result Stored in Mentorship Eligibilty  Table**
+**Result Stored in Mentorship Eligibility Table**
 
 ![image](https://user-images.githubusercontent.com/31812730/194465157-605ad31e-3a35-4898-95ed-ee334ec054a8.png)
 
 ## Summary
 As How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 
-The data suggests that "sliver tsunami" will have a major impact on the organization as quite a few people will begin to retire.The organization has set couple of criterias to determine which employees will be retiring. 
+The data suggests that "sliver tsunami" will have a major impact on the organization as quite a few people will begin to retire. The organization has set couple of criterions to determine which employees will be retiring. 
 
 **Roles to be Filled**
 
-Based on those criterias, an employee will begin to retire if following conditions are satisfied:
+Based on those criterions, an employee will begin to retire if following conditions are satisfied:
 1. Anyone born between 1952 and 1955. 
 2. They are currently employed with the organization.
 
-There are 90,398 employees borned between 1952 and 1955. Out of these employees, **72,458** employees are currently employed and will begn to retire. The employee count by role is shown in step 3 under results. 
+There are 90,398 employees born between 1952 and 1955. Out of these employees, **72,458** employees are currently employed and will begin to retire. The employee count by role is shown in step 3 under results. 
 
 Further, **Retirement Titles, Departments, and Department Employee** tables were joined to create a new table **Roles to Fill** to store the department information for each retiring employee. 
 
@@ -104,13 +104,16 @@ Extract from **Roles to Fill Summary** is shown below:
 
 ![image](https://user-images.githubusercontent.com/31812730/194779224-47d4386e-be79-4c94-88a8-e9230bc53364.png)
 
-This retiring roles information by department will help the managers of each department to plan ahead and be prepared to execute the plan as the **silver tsunami** begins to make an impact.   
+This retiring role information by department will help the managers of each department to plan ahead and be prepared to execute the plan as the **silver tsunami** begins to make an impact.   
 
 **Mentor the Next Generation**
-The employee count by role shown in step 3 under results, shows that there are enough qualified employees who are retiremenent-ready and organization can use them as mentors. For instance,  there are 25,916 senor engineers, 24,926 senior staffs, 3.603 technical leaders and 2 managers who are retirement-ready. These peopleare experenced and can be used as mentors.
+The employee count by role shown in step 3 under results, shows that there are enough qualified employees who are retirement-ready, and organization can use them as mentors. For instance, there are 25,916 senior engineers, 24,926 senior staffs, 3.603 technical leaders and 2 managers who are retirement ready. These people are experienced and can be used as mentors.
 
-A new table was created retrieving data from the **Roles to Fill** table showing  The employee count in these roles by department 
+A new table was created retrieving data from the **Roles to Fill** table showing count of qualified mentors by department. 
 
+![image](https://user-images.githubusercontent.com/31812730/194795415-136c9ad1-720c-481e-b3fd-613debabd65d.png)
+ 
+A closure look at the table shown above confirms that there are enough qualified, retirement-ready employees in the departments to mentor the next generation of employees. 
 
 
 
