@@ -82,11 +82,36 @@ The SQL query used to retieve data from the **Mentorship Eligibility** table is 
 ![image](https://user-images.githubusercontent.com/31812730/194465157-605ad31e-3a35-4898-95ed-ee334ec054a8.png)
 
 ## Summary
-How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-The organization has set couple of criterias to determine which employees will be retiring. Based on those criterias, an employee will begin to retire if following conditions are satisfied:
-1. Anyone born between 1952 and 1955 
-2. They were also hired between 1985 and 1988.
-3. They are currently employed with the organization
+As How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+
+The data suggests that "sliver tsunami" will have a major impact on the organization as quite a few people will begin to retire.The organization has set couple of criterias to determine which employees will be retiring. 
+
+**Roles to be Filled**
+
+Based on those criterias, an employee will begin to retire if following conditions are satisfied:
+1. Anyone born between 1952 and 1955. 
+2. They are currently employed with the organization.
+
+There are 90,398 employees borned between 1952 and 1955. Out of these employees, **72,458** employees are currently employed and will begn to retire. The employee count by role is shown in step 3 under results. 
+
+Further, **Retirement Titles, Departments, and Department Employee** tables were joined to create a new table **Roles to Fill** to store the department information for each retiring employee. 
+
+![image](https://user-images.githubusercontent.com/31812730/194779824-37396739-b4fb-4f61-a5a2-e0a767785af7.png)
+
+From the new table, retiring role name and count of retiring roles for each department was extracted and stored in another new table **Roles to Fill Summary**.
+
+Extract from **Roles to Fill Summary** is shown below:
+
+![image](https://user-images.githubusercontent.com/31812730/194779224-47d4386e-be79-4c94-88a8-e9230bc53364.png)
+
+This retiring roles information by department will help the managers of each department to plan ahead and be prepared to execute the plan as the **silver tsunami** begins to make an impact.   
+
+**Mentor the Next Generation**
+
+
+
+
+
 
 
  
