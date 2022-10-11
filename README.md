@@ -107,6 +107,7 @@ Extract from **Roles to Fill Summary** is shown below:
 This retiring role information by department will help the managers of each department to plan ahead and be prepared to execute the plan as the **silver tsunami** begins to make an impact.   
 
 **Mentor the Next Generation**
+
 The employee count by role shown in step 3 under results, shows that there are enough qualified employees who are retirement-ready, and organization can use them as mentors. For instance, there are 25,916 senior engineers, 24,926 senior staffs, 3.603 technical leaders and 2 managers who are retirement ready. These people are experienced and can be used as mentors.
 
 A new table was created retrieving data from the **Roles to Fill** table showing count of qualified mentors by department. 
