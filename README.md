@@ -1,7 +1,7 @@
 # Module7 Challenge - Silver Tsunami
 
 ## Overview
-Many employees will be retiring from Pewlett Hackard in next few years. The managers need to prepare for the **silver tsunami**. The purpose of this technical analysis is to determine the number of retiring employees per title and identify employees who are eligible to participate in a mentorship program offered by Pewlett Hackard.
+Many employees will be retiring from Pewlett Hackard in next few years. The managers need to prepare for the **silver tsunami**. The purpose of this technical analysis is to determine the number of retiring employees for each title and identify employees who are eligible to participate in a mentorship program offered by Pewlett Hackard.
 
 The technical analysis report primarily answers the following questions:
 1. The Number of Retiring Employees by Title
@@ -86,7 +86,7 @@ As How many roles will need to be filled as the "silver tsunami" begins to make 
 
 The data suggests that "sliver tsunami" will have a major impact on the organization as quite a few people will begin to retire. The organization has set couple of criterions to determine which employees will be retiring. 
 
-**Roles to be Filled**
+### Roles to be Filled
 
 Based on those criterions, an employee will begin to retire if following conditions are satisfied:
 1. Anyone born between 1952 and 1955. 
@@ -106,7 +106,7 @@ Extract from **Roles to Fill Summary** is shown below:
 
 This retiring role information by department will help the managers of each department to plan ahead and be prepared to execute the plan as the **silver tsunami** begins to make an impact.   
 
-**Mentor the Next Generation**
+### Mentor the Next Generation
 
 The employee count by role shown in step 3 under results, shows that there are enough qualified employees who are retirement-ready, and organization can use them as mentors. For instance, there are 25,916 senior engineers, 24,926 senior staffs, 3.603 technical leaders and 2 managers who are retirement ready. These people are experienced and can be used as mentors.
 
